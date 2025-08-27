@@ -4,14 +4,23 @@ public class SkiTrip extends Trip {
 
     int skiRental;
 
-    SkiTrip(String location, int price, int duration, int amountOfMembers, int skiRental) {
-        super(location, price, duration, amountOfMembers);
+    public SkiTrip(int tripID, String location, int price, int duration, int amountOfMembers, int skiRental) {
+        super(tripID, location, price, duration, amountOfMembers);
+        this.skiRental = skiRental;
+    }
+
+    public int getSkiRental() {
+        return skiRental;
+    }
+
+    public void setSkiRental(int skiRental) {
         this.skiRental = skiRental;
     }
 
     public String toString() {
 
-        return "Location:" + location +
+        return  "Trip ID: " + tripID +
+                "\nLocation: " + location +
                 "\nPrice per day: " + price + " kr." +
                 "\nDuration: " + duration + " days" +
                 "\nAmount Of Members: " + amountOfMembers +
