@@ -13,8 +13,9 @@ public class TripsMenu {
 
             System.out.println("What do you want to do?\n");
             System.out.println("1. Create new trip.");
-            System.out.println("2. List trip");
-            System.out.println("3. Alter trip\n");
+            System.out.println("2. List of all trips.");
+            System.out.println("3. Search for trips.");
+            System.out.println("4. Alter trip.\n");
 
             int choiceOfAction = scanner.nextInt();
 
@@ -22,7 +23,8 @@ public class TripsMenu {
 
                 case 1 -> createTrip(trips, scanner);
                 case 2 -> listTrip(trips);
-                case 3 -> alterTrip(trips, scanner);
+                case 3 -> searchForTrip(trips, scanner);
+                case 4 -> alterTrip(trips, scanner);
                 default -> System.exit(0);
 
             }
@@ -83,6 +85,10 @@ public class TripsMenu {
 
     }
 
+    static void searchForTrip(ArrayList<Trip> trips, Scanner scanner) {
+
+    }
+
     static void listTrip(ArrayList<Trip> trips) {
 
         for(Trip trip : trips) {
@@ -104,7 +110,7 @@ public class TripsMenu {
 
         System.out.println("Please enter the trip ID of the trip you wish to alter.\n");
 
-        int choiceOfTrip = scanner.nextInt();
+        int choiceOfTrip = scanner.nextInt()-1;
         scanner.nextLine();
 
         System.out.println(trips.get(choiceOfTrip) + "\n");
@@ -126,6 +132,7 @@ public class TripsMenu {
         }
 
         int informationToAlter = scanner.nextInt();
+        scanner.nextLine();
 
         String information = "";
 
@@ -145,7 +152,7 @@ public class TripsMenu {
 
         }
 
-        System.out.println("What do you want to change the " + information + " to?\n");
+        System.out.println("\nWhat do you want to change the " + information + " to?\n");
 
         String newInformation = scanner.nextLine();
 
