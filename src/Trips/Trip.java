@@ -1,15 +1,12 @@
 package Trips;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Trip {
 
-    int tripID;
-    String location;
-    int price;
-    int duration;
-    int amountOfMembers;
+    private int tripID;
+    private String location;
+    private int price;
+    private int duration;
+    private int amountOfMembers;
 
     public Trip(int tripID, String location, int price, int duration, int amountOfMembers) {
 

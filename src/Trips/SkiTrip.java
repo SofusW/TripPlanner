@@ -2,7 +2,7 @@ package Trips;
 
 public class SkiTrip extends Trip {
 
-    int skiRental;
+    private int skiRental;
 
     public SkiTrip(int tripID, String location, int price, int duration, int amountOfMembers, int skiRental) {
         super(tripID, location, price, duration, amountOfMembers);
@@ -19,13 +19,13 @@ public class SkiTrip extends Trip {
 
     public String toString() {
 
-        return  "Trip ID: " + tripID +
-                "\nLocation: " + location +
-                "\nPrice per day: " + price + " kr." +
-                "\nDuration: " + duration + " days" +
-                "\nAmount Of Members: " + amountOfMembers +
+        return  "Trip ID: " + getTripID() +
+                "\nLocation: " + getLocation() +
+                "\nPrice per day: " + getPrice() + " kr." +
+                "\nDuration: " + getDuration() + " days" +
+                "\nAmount Of Members: " + getAmountOfMembers() +
                 "\nPrice of ski rental per day: " + skiRental + " kr." +
-                "\nTotal cost: " + ((price * duration) + (skiRental * duration * amountOfMembers)) + " kr.";
+                "\nTotal cost: " + ((getPrice() * getDuration()) + (skiRental * getDuration() * getAmountOfMembers())) + " kr.";
 
     }
 

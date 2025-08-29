@@ -9,7 +9,7 @@ public class TripsMenu {
 
         Scanner scanner = new Scanner(System.in);
 
-        while(1 > 0) {
+        while(true) {
 
             System.out.println("What do you want to do?\n");
             System.out.println("1. Create new trip.");
